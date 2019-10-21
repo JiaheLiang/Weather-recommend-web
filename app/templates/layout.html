@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+
+    {% if title %}
+        <title>Find out the weather - {{ title }}</title>
+    {% else %}
+        <title>Weather recommend web</title>
+    {% endif %}
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/auth">Up coming events!!</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+          </div>
+        </div>
+      </nav>
+    </header>
+          {% block content %}
+		  {% endblock %}
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-6">
+                <hr class="light">
+                <p>A weather recommend website~~~~</p>
+				<hr class="light">
+            </div>
+            <div class="col-md-6">
+                <hr class="light">
+                <p><small>Jiahe Liang s3430882</small></p>
+                <hr class="light">
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+ {% for events in events %}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7">
+				<div class="content-section">
+					<h5>The event id: {{ events.eid }}</h5>
+					<h5>The Event start at: {{ events.start }}</h5>
+					<h5>The Event end at:  {{ events.end }}</h5>
+					<h5>Location:  {{ events.location }}</h5>
+					<h5>Summary: {{ events.summary }}</h5>
+					<h5>Today's weather: {{ events.weather }}</h5>
+					<h5>Today's temperature: {{ events.temp }}</h5>
+					<h5>Today's mini temperature: {{ events.min }}</h5>
+					<h5>Today's max temperature: {{ events.max }}</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+    {% endfor %}
+
+{% endblock content %}
